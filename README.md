@@ -1,4 +1,14 @@
-# AdrianJaime.portfolio
-Ich bin Mechatronikstudent am Tecnológico de Monterrey in Mexiko und studiere seit Oktober 2026 zusätzlich Elektrotechnik an der Hochschule Zittau/Görlitz im Rahmen eines Doppelabschlussprogramms. Mein Schwerpunkt liegt auf Robotik, Automatisierung, Konstruktion und Inbetriebnahme. Besonders möchte ich mehr über humanoide Robotik, Motion Capture und neue Anwendungen in der Fertigung lernen.
+*PORTFOLIO – Adrian Agustin Jaime Luna
 
-Deutsch: A2 zertifiziert, B2-Kurs läuft · Englisch: TOEFL iBT 90
+1) Öffne index.html per Doppelklick im Browser.
+2) Prüfe, ob alle Texte zu deinem tatsächlichen Profil passen.
+3) Optional ergänzen:
+   - E-Mail
+   - LinkedIn
+   - eigene Projektfotos / CAD-Bilder
+4) Lade den kompletten Ordner bei Netlify Drop hoch oder veröffentliche ihn mit GitHub Pages.
+
+WICHTIG:
+- Keine vertraulichen Kundendaten, SPS-Programme, Schaltpläne oder internen Screenshots veröffentlichen.
+- Notenspiegel, Immatrikulationsbescheinigung, Aufenthalts-/Arbeitsdokumente nicht öffentlich hochladen.
+- Der Text sagt bewusst NICHT, dass du Erfahrung mit Motion Capture oder humanoiden Robotern hast.
