@@ -1,4 +1,4 @@
-*PORTFOLIO – Adrian Agustin Jaime Luna
+# PORTFOLIO – Adrian Agustin Jaime Luna
 
 1) Öffne index.html per Doppelklick im Browser.
 2) Prüfe, ob alle Texte zu deinem tatsächlichen Profil passen.
