@@ -58,10 +58,6 @@
       margin:auto;
     }
 
-    /* =======================================================
-       NAVIGATION
-       ======================================================= */
-
     nav{
       position:sticky;
       top:0;
@@ -101,10 +97,6 @@
     .navlinks a:hover{
       color:var(--accent2);
     }
-
-    /* =======================================================
-       HERO
-       ======================================================= */
 
     header{
       color:#ffffff;
@@ -186,10 +178,6 @@
       font-size:.87rem;
     }
 
-    /* =======================================================
-       PORTRAIT
-       ======================================================= */
-
     .portrait{
       width:min(100%,330px);
 
@@ -213,10 +201,6 @@
 
       border-radius:22px;
     }
-
-    /* =======================================================
-       GENERIC SECTIONS
-       ======================================================= */
 
     main section{
       padding:46px 0;
@@ -242,10 +226,6 @@
 
       margin-bottom:22px;
     }
-
-    /* =======================================================
-       ABOUT
-       ======================================================= */
 
     .about-grid{
       display:grid;
@@ -284,10 +264,6 @@
       display:block;
       margin-bottom:4px;
     }
-
-    /* =======================================================
-       PROJECTS
-       ======================================================= */
 
     .projects{
       display:grid;
@@ -332,10 +308,6 @@
       margin-bottom:12px;
     }
 
-    /* =======================================================
-       DELTA PHOTO — ONLY THIS PROJECT USES 4:5
-       ======================================================= */
-
     .delta-media{
       padding:20px;
 
@@ -368,10 +340,6 @@
       object-fit:cover;
     }
 
-    /* =======================================================
-       VIDEO
-       ======================================================= */
-
     .video-box{
       width:100%;
       max-width:480px;
@@ -393,8 +361,6 @@
       max-width:440px;
     }
 
-    /* Keep every portfolio video silent and hide the audio controls.
-       Chromium/WebKit (Chrome, Edge, Safari). */
     video::-webkit-media-controls-mute-button{
       display:none !important;
     }
@@ -416,10 +382,6 @@
       font-size:.84rem;
     }
 
-    /* =======================================================
-       AGV VIDEO SECTION
-       ======================================================= */
-
     .agv-project{
       padding-bottom:32px;
     }
@@ -439,10 +401,6 @@
         30px
         30px;
     }
-
-    /* =======================================================
-       FACTS + TAGS
-       ======================================================= */
 
     .facts{
       display:grid;
@@ -493,10 +451,6 @@
       font-weight:700;
     }
 
-    /* =======================================================
-       PROJECT DETAILS
-       ======================================================= */
-
     .details{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
@@ -525,10 +479,6 @@
       font-size:.94rem;
     }
 
-    /* =======================================================
-       TEXT-ONLY INDUSTRIAL PROJECTS
-       ======================================================= */
-
     .industrial-project{
       padding:28px;
     }
@@ -536,11 +486,6 @@
     .industrial-content{
       max-width:850px;
     }
-
-
-    /* =======================================================
-       ENHANCED PORTFOLIO LAYOUT
-       ======================================================= */
 
     .project-top.single{
       grid-template-columns:1fr;
@@ -619,7 +564,7 @@
       margin-top:15px;
     }
 
-    .skill-cloud span{
+    .skill-cloud > span{
       padding:8px 11px;
       border-radius:999px;
       border:1px solid #d5e5ef;
@@ -677,10 +622,6 @@
       }
     }
 
-    /* =======================================================
-       DOCUMENTS
-       ======================================================= */
-
     .documents{
       display:grid;
       grid-template-columns:minmax(260px,420px);
@@ -733,10 +674,6 @@
     .doc a:hover{
       text-decoration:underline;
     }
-
-    /* =======================================================
-       CONTACT
-       ======================================================= */
 
     .contact-box{
       display:grid;
@@ -799,10 +736,6 @@
 
       text-align:center;
     }
-
-    /* =======================================================
-       RESPONSIVE
-       ======================================================= */
 
     @media(max-width:900px){
 
@@ -867,12 +800,6 @@
 
     }
 
-  
-
-    /* =======================================================
-       LANGUAGE SWITCH
-       ======================================================= */
-
     .nav-right{
       display:flex;
       align-items:center;
@@ -905,10 +832,6 @@
       color:#fff;
       background:var(--accent);
     }
-
-    /* =======================================================
-       CERTIFICATES
-       ======================================================= */
 
     .cert-strip{
       display:grid;
@@ -1008,9 +931,8 @@
 </style>
 </head>
 <body>
-<!-- =========================================================
-     NAVIGATION
-     ========================================================= -->
+
+<!-- Navigation -->
 <nav>
 <div class="wrap inner">
 <div class="brand"><span class="i18n" data-de="Adrian Jaime · Portfolio" data-en="Adrian Jaime · Portfolio">Adrian Jaime · Portfolio</span></div>
@@ -1025,9 +947,8 @@
 <button class="lang-btn" data-lang="en" type="button">EN</button>
 </div></div></div>
 </nav>
-<!-- =========================================================
-     HERO
-     ========================================================= -->
+
+<!-- Hero -->
 <header>
 <div class="wrap hero">
 <div>
@@ -1048,9 +969,8 @@
 </div>
 </header>
 <main>
-<!-- =========================================================
-     ABOUT
-     ========================================================= -->
+
+<!-- About -->
 <section id="ueber-mich">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Profil" data-en="Profile">Profil</span></div>
@@ -1076,18 +996,16 @@
 </div>
 </div>
 </section>
-<!-- =========================================================
-     PROJECTS
-     ========================================================= -->
+
+<!-- Projects -->
 <section id="projekte">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Selected Work" data-en="Selected Work">Selected Work</span></div>
 <h2><span class="i18n" data-de="Ausgewählte Projekte" data-en="Selected projects">Ausgewählte Projekte</span></h2>
 <p class="section-lead"><span class="i18n" data-de="Meine Projekte zeigen unterschiedliche Seiten der Mechatronik: von Konstruktion und Fertigung über SPS- und Embedded-Programmierung bis zu Sensorintegration, Robotik und Inbetriebnahme. Bei jedem Projekt beschreibe ich bewusst meinen eigenen Beitrag." data-en="My projects cover different areas of mechatronics: from design and manufacturing to PLC and embedded programming, sensor integration, robotics and commissioning. For each project, I explicitly describe my own contribution.">Meine Projekte zeigen unterschiedliche Seiten der Mechatronik: von Konstruktion und Fertigung über SPS- und Embedded-Programmierung bis zu Sensorintegration, Robotik und Inbetriebnahme. Bei jedem Projekt beschreibe ich bewusst meinen eigenen Beitrag.</span></p>
 <div class="projects">
-<!-- =====================================================
-           01 - DELTA ROBOT
-           ===================================================== -->
+
+<!-- Delta Robot -->
 <article class="project">
 <div class="project-top">
 <div class="project-copy">
@@ -1167,9 +1085,7 @@
 </div>
 </div>
 </article>
-<!-- =====================================================
-           02 - AGV FROM SCRATCH
-           ===================================================== -->
+
 <article class="project">
 <div class="project-wide">
 <div class="project-copy">
@@ -1244,9 +1160,7 @@
 </div>
 </div>
 </article>
-<!-- =====================================================
-           03 - MOBILE ROBOT TO AGV TO AMR
-           ===================================================== -->
+
 <article class="project">
 <div class="project-wide">
 <div class="project-copy">
@@ -1332,9 +1246,7 @@
 </div>
 </div>
 </article>
-<!-- =====================================================
-           04 - FLUXING
-           ===================================================== -->
+
 <article class="project">
 <div class="project-top">
 <div class="project-copy">
@@ -1376,9 +1288,7 @@
 </div>
 </div>
 </article>
-<!-- =====================================================
-           05 - SINCI
-           ===================================================== -->
+
 <article class="project">
 <div class="project-top">
 <div class="project-copy">
@@ -1424,9 +1334,8 @@
 </div>
 </div>
 </section>
-<!-- =========================================================
-     MANUFACTURING & HANDS-ON EXPERIENCE
-     ========================================================= -->
+
+<!-- Manufacturing -->
 <section id="fertigung">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Hands-on Engineering" data-en="Hands-on Engineering">Hands-on Engineering</span></div>
@@ -1461,6 +1370,7 @@
 </div>
 </div>
 </section>
+<!-- Certifications -->
 <section id="zertifikate">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Zertifikate" data-en="Certifications">Zertifikate</span></div>
@@ -1485,7 +1395,8 @@
 </div>
 </div><div class="cert-download-all" style="margin-top:18px;"><a class="cert-link" href="docs/SOLIDWORKS_Certificates.pdf" rel="noopener noreferrer" target="_blank"><span class="i18n" data-de="Alle Zertifikate ansehen" data-en="View all certificates">Alle Zertifikate ansehen</span></a></div>
 </div>
-</section><section id="dokumente">
+</section><!-- Documents -->
+<section id="dokumente">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Unterlagen" data-en="Documents">Unterlagen</span></div>
 <h2><span class="i18n" data-de="Dokumente" data-en="Documents">Dokumente</span></h2>
@@ -1502,9 +1413,8 @@
 </div>
 </div>
 </section>
-<!-- =========================================================
-     CONTACT
-     ========================================================= -->
+
+<!-- Contact -->
 <section id="kontakt">
 <div class="wrap">
 <div class="contact-box">
@@ -1583,8 +1493,6 @@
     });
   });
 
-
-  // Portfolio videos are intentionally silent.
   document.querySelectorAll('video').forEach(function(video){
     video.muted = true;
     video.volume = 0;
