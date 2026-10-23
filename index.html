@@ -374,24 +374,37 @@
 
     .video-box{
       width:100%;
-      max-width:560px;
-
+      max-width:480px;
+      align-self:start;
       overflow:hidden;
-
       border-radius:18px;
       border:1px solid var(--line);
-
-      background:#0d151b;
+      background:#ffffff;
     }
 
     .video-box video{
       width:100%;
-
-      aspect-ratio:16 / 9;
-
+      aspect-ratio:4 / 3;
       object-fit:contain;
-
       background:#000000;
+    }
+
+    .delta-media .video-box{
+      max-width:440px;
+    }
+
+    /* Keep every portfolio video silent and hide the audio controls.
+       Chromium/WebKit (Chrome, Edge, Safari). */
+    video::-webkit-media-controls-mute-button{
+      display:none !important;
+    }
+
+    video::-webkit-media-controls-volume-slider{
+      display:none !important;
+    }
+
+    video::-webkit-media-controls-volume-control-container{
+      display:none !important;
     }
 
     .video-caption{
@@ -466,7 +479,7 @@
       margin-top:12px;
     }
 
-    .tech span{
+    .tech > span{
       padding:6px 9px;
 
       border-radius:999px;
@@ -961,23 +974,29 @@
     .media-pair{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:12px;
+      gap:16px;
       padding:0 20px 20px;
-      align-items:stretch;
+      align-items:start;
+      max-width:1040px;
+      margin:0 auto;
+    }
+
+    .media-pair .video-box{
+      max-width:none;
     }
 
     .media-card{
+      width:100%;
+      aspect-ratio:4 / 3;
       overflow:hidden;
       border:1px solid var(--line);
       border-radius:18px;
       background:#e6ebef;
-      min-height:280px;
     }
 
     .media-card img{
       width:100%;
       height:100%;
-      min-height:280px;
       object-fit:cover;
     }
 
@@ -1127,7 +1146,7 @@
 <img alt="Delta-Roboter aus meinem Studienprojekt" src="assets/delta-main.jpeg"/>
 </div>
 <div class="video-box optional-video">
-<video controls="" playsinline="" poster="assets/delta-main.jpeg" preload="metadata">
+<video controls="" controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture="" disableremoteplayback="" muted="" playsinline="" poster="assets/delta-main.jpeg" preload="metadata">
 <source src="assets/delta-demo.mp4" type="video/mp4"/><span class="i18n" data-de="Dein Browser unterstützt dieses Video nicht." data-en="Your browser does not support this video.">Dein Browser unterstützt dieses Video nicht.</span></video>
 <div class="video-caption"><span class="i18n" data-de="Delta-Roboter · Bewegungs- und Funktionstest" data-en="Delta robot · motion and functional test">Delta-Roboter · Bewegungs- und Funktionstest</span></div>
 </div>
@@ -1196,26 +1215,13 @@
 </div>
 </div>
 </div>
-<div class="video-grid">
-<div class="video-box optional-video">
-<video controls="" playsinline="" preload="metadata">
-<source src="assets/agv-build-demo-1.mp4" type="video/mp4"/>
-</video>
-<div class="video-caption"><span class="i18n" data-de="AGV · Konstruktion und mechanischer Aufbau" data-en="AGV · design and mechanical assembly">AGV · Konstruktion und mechanischer Aufbau</span></div>
-</div>
-<div class="video-box optional-video">
-<video controls="" playsinline="" preload="metadata">
-<source src="assets/agv-build-demo-2.mp4" type="video/mp4"/>
-</video>
-<div class="video-caption"><span class="i18n" data-de="AGV · Scherenmechanismus / Funktionstest" data-en="AGV · scissor mechanism / functional test">AGV · Scherenmechanismus / Funktionstest</span></div>
-</div>
-</div>
+
 <div class="media-pair">
 <div class="media-card optional-media">
 <img alt="AGV-Projekt – Konstruktion und Fertigung" onerror="this.closest('.optional-media').style.display='none'" src="assets/agv-build-main.jpg"/>
 </div>
 <div class="video-box optional-video">
-<video controls="" playsinline="" preload="metadata">
+<video controls="" controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture="" disableremoteplayback="" muted="" playsinline="" preload="metadata">
 <source src="assets/agv-build-demo.mp4" type="video/mp4"/>
           Dein Browser unterstützt dieses Video nicht.
         </video>
@@ -1288,7 +1294,7 @@
 <span><span class="i18n" data-de="STM32" data-en="STM32">STM32</span></span>
 <span>Encoder</span>
 <span><span class="i18n" data-de="IMU" data-en="IMU">IMU</span></span>
-<span><span class="i18n" data-de="I²C" data-en="I²C">I²C</span></span>
+
 <span><span class="i18n" data-de="UART" data-en="UART">UART</span></span>
 <span><span class="i18n" data-de="IR-Sensoren" data-en="IR sensors">IR-Sensoren</span></span>
 <span><span class="i18n" data-de="Ultraschall" data-en="Ultrasonic sensor">Ultraschall</span></span>
@@ -1297,26 +1303,13 @@
 </div>
 </div>
 </div>
-<div class="video-grid">
-<div class="video-box optional-video">
-<video controls="" playsinline="" preload="metadata">
-<source src="assets/amr-demo-1.mp4" type="video/mp4"/>
-</video>
-<div class="video-caption"><span class="i18n" data-de="AGV-Modus · Linienführung und Stationslogik" data-en="AGV mode · line following and station logic">AGV-Modus · Linienführung und Stationslogik</span></div>
-</div>
-<div class="video-box optional-video">
-<video controls="" playsinline="" preload="metadata">
-<source src="assets/amr-demo-2.mp4" type="video/mp4"/>
-</video>
-<div class="video-caption"><span class="i18n" data-de="AMR-Modus · Sensorik, Odometrie und Trajektorie" data-en="AMR mode · sensors, odometry and trajectory tracking">AMR-Modus · Sensorik, Odometrie und Trajektorie</span></div>
-</div>
-</div>
+
 <div class="media-pair">
 <div class="media-card optional-media">
 <img alt="AMR-Projekt – Sensorik und autonome Navigation" onerror="this.closest('.optional-media').style.display='none'" src="assets/amr-main.jpeg"/>
 </div>
 <div class="video-box optional-video">
-<video controls="" playsinline="" preload="metadata">
+<video controls="" controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture="" disableremoteplayback="" muted="" playsinline="" preload="metadata">
 <source src="assets/amr-demo.mp4" type="video/mp4"/>
           Dein Browser unterstützt dieses Video nicht.
         </video>
@@ -1587,6 +1580,21 @@
     img.addEventListener('error', function(){
       const card = img.closest('.optional-media');
       if(card) card.style.display = 'none';
+    });
+  });
+
+
+  // Portfolio videos are intentionally silent.
+  document.querySelectorAll('video').forEach(function(video){
+    video.muted = true;
+    video.volume = 0;
+    video.defaultMuted = true;
+
+    video.addEventListener('volumechange', function(){
+      if(!video.muted || video.volume !== 0){
+        video.muted = true;
+        video.volume = 0;
+      }
     });
   });
 </script></body>
