@@ -1,3 +1,364 @@
+
+
+Texto pegado(20261109-223327).txt
+Documento
+
+UR_Certificates.pdf
+PDF
+Hola chat, me gustaría agregar estos UR_certificates igual que como están los de solidworks en el html, me ayudas por favor?
+
+Procesó durante 2m 53s
+¡Listo! 😊 Ya actualicé tu HTML y agregué los 8 certificados utilizando el mismo diseño de tarjetas que tienes para SOLIDWORKS.
+
+Ahora la sección Zertifikate contiene:
+
+SOLIDWORKS: los 4 certificados originales.
+
+Universal Robots Academy: 5 certificados (UR20/30, PolyScope X y los tres tracks de e-Series).
+
+Mobile Industrial Robots (MiR): 3 certificados (Personnel Safety, Autonomous Navigation y Mission Programming).
+
+También mantuve la traducción alemán/inglés y agregué botones para abrir los certificados en PDF.
+
+Descargar portafolio actualizado (ZIP)
+
+Incluye index.html y UR_Certificates.pdf en la carpeta docs.
+
+Descargar solo el HTML actualizado
+
+Para integrarlo manualmente a tu proyecto.
+
+Importante: si utilizas el ZIP, conserva las carpetas assets y docs de tu portafolio actual, porque contienen tus imágenes, videos y demás documentos.
+
+No modifiqué tus proyectos ni el resto del contenido del portafolio.
+
+
+portfolio_UR_certificados.html
+HTML
+me lo puedes dar en texto por favor?
+
+Procesó durante 28s
+¡Claro! 😊 Te paso el código HTML directamente aquí para que puedas copiarlo y pegarlo en tu portafolio.
+
+Conserva el diseño de SOLIDWORKS, añade los 5 certificados de Universal Robots y los 3 de MiR, y mantiene el cambio de idioma alemán/inglés.
+
+1. Agrega este CSS
+Busca la etiqueta </style> de tu HTML y pega lo siguiente justo antes:
+
+
+.cert-group + .cert-group {
+  margin-top: 36px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.cert-group h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  line-height: 1.25;
+}
+
+.cert-group .section-lead {
+  margin-bottom: 20px;
+}
+
+2. Reemplaza la sección de certificados
+Busca en tu HTML:
+
+<!-- Certifications -->
+
+Reemplaza toda la sección <section id="zertifikate"> ... </section> con este código. No modifiques la siguiente sección <!-- Documents -->.
+
+
+<!-- Certifications -->
+<section id="zertifikate">
+  <div class="wrap">
+
+    <div class="kicker">
+      <span class="i18n"
+        data-de="Zertifikate"
+        data-en="Certifications">
+        Zertifikate
+      </span>
+    </div>
+
+    <h2>
+      <span class="i18n"
+        data-de="Technische Zertifizierungen"
+        data-en="Technical Certifications">
+        Technische Zertifizierungen
+      </span>
+    </h2>
+
+    <p class="section-lead">
+      <span class="i18n"
+        data-de="Meine Zertifikate ergänzen meine Projektarbeit in Konstruktion, Industrierobotik und autonomen mobilen Robotern."
+        data-en="My certificates complement my project work in mechanical design, industrial robotics and autonomous mobile robots.">
+        Meine Zertifikate ergänzen meine Projektarbeit in Konstruktion, Industrierobotik und autonomen mobilen Robotern.
+      </span>
+    </p>
+
+    <!-- SOLIDWORKS -->
+    <div class="cert-group">
+
+      <h3>
+        <span class="i18n"
+          data-de="SOLIDWORKS Zertifizierungen"
+          data-en="SOLIDWORKS Certifications">
+          SOLIDWORKS Zertifizierungen
+        </span>
+      </h3>
+
+      <p class="section-lead">
+        <span class="i18n"
+          data-de="Ergänzend zu meinen Projekten habe ich vier SOLIDWORKS Associate-Zertifizierungen, die meine Kenntnisse in Konstruktion, Simulation, additiver Fertigung und Nachhaltigkeit dokumentieren."
+          data-en="In addition to my projects, I hold four SOLIDWORKS Associate certifications covering mechanical design, simulation, additive manufacturing and sustainability.">
+          Ergänzend zu meinen Projekten habe ich vier SOLIDWORKS Associate-Zertifizierungen, die meine Kenntnisse in Konstruktion, Simulation, additiver Fertigung und Nachhaltigkeit dokumentieren.
+        </span>
+      </p>
+
+      <div class="cert-strip">
+
+        <div class="cert-card">
+          <strong>CSWA</strong>
+          <span>SOLIDWORKS Design Associate</span>
+        </div>
+
+        <div class="cert-card">
+          <strong>Simulation</strong>
+          <span>SOLIDWORKS Simulation Associate</span>
+        </div>
+
+        <div class="cert-card">
+          <strong>Additive Manufacturing</strong>
+          <span>SOLIDWORKS Additive Manufacturing Associate</span>
+        </div>
+
+        <div class="cert-card">
+          <strong>Sustainability</strong>
+          <span>SOLIDWORKS Sustainability Associate</span>
+        </div>
+
+      </div>
+
+      <div class="cert-download-all" style="margin-top:18px;">
+        <a class="cert-link"
+          href="docs/SOLIDWORKS_Certificates.pdf"
+          target="_blank"
+          rel="noopener noreferrer">
+          <span class="i18n"
+            data-de="Alle Zertifikate ansehen"
+            data-en="View all certificates">
+            Alle Zertifikate ansehen
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- UNIVERSAL ROBOTS -->
+    <div class="cert-group">
+
+      <h3>Universal Robots Academy</h3>
+
+      <p class="section-lead">
+        <span class="i18n"
+          data-de="Fünf abgeschlossene Schulungen zu UR20/30, PolyScope X und den Core-, Pro- und Application-Lernpfaden der e-Series."
+          data-en="Five completed training courses covering UR20/30, PolyScope X, and the e-Series Core, Pro and Application tracks.">
+          Fünf abgeschlossene Schulungen zu UR20/30, PolyScope X und den Core-, Pro- und Application-Lernpfaden der e-Series.
+        </span>
+      </p>
+
+      <div class="cert-strip">
+
+        <div class="cert-card">
+          <strong>UR20/30</strong>
+          <span>
+            <span class="i18n"
+              data-de="e-Learning · Dezember 2025"
+              data-en="e-Learning · December 2025">
+              e-Learning · Dezember 2025
+            </span>
+          </span>
+        </div>
+
+        <div class="cert-card">
+          <strong>PolyScope X</strong>
+          <span>
+            <span class="i18n"
+              data-de="e-Learning · Dezember 2025"
+              data-en="e-Learning · December 2025">
+              e-Learning · Dezember 2025
+            </span>
+          </span>
+        </div>
+
+        <div class="cert-card">
+          <strong>e-Series Core Track</strong>
+          <span>
+            <span class="i18n"
+              data-de="Lernpfad · Dezember 2025"
+              data-en="Learning track · December 2025">
+              Lernpfad · Dezember 2025
+            </span>
+          </span>
+        </div>
+
+        <div class="cert-card">
+          <strong>e-Series Pro Track</strong>
+          <span>
+            <span class="i18n"
+              data-de="Lernpfad · Dezember 2025"
+              data-en="Learning track · December 2025">
+              Lernpfad · Dezember 2025
+            </span>
+          </span>
+        </div>
+
+        <div class="cert-card">
+          <strong>e-Series Application Track</strong>
+          <span>
+            <span class="i18n"
+              data-de="Lernpfad · Dezember 2025"
+              data-en="Learning track · December 2025">
+              Lernpfad · Dezember 2025
+            </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="cert-download-all" style="margin-top:18px;">
+        <a class="cert-link"
+          href="docs/UR_Certificates.pdf#page=1"
+          target="_blank"
+          rel="noopener noreferrer">
+          <span class="i18n"
+            data-de="Universal Robots Zertifikate ansehen"
+            data-en="View Universal Robots certificates">
+            Universal Robots Zertifikate ansehen
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- MOBILE INDUSTRIAL ROBOTS -->
+    <div class="cert-group">
+
+      <h3>Mobile Industrial Robots (MiR) Academy</h3>
+
+      <p class="section-lead">
+        <span class="i18n"
+          data-de="Drei abgeschlossene Schulungen zu Personensicherheit, autonomer Navigation und Missionsprogrammierung für mobile Robotersysteme."
+          data-en="Three completed training courses covering personnel safety, autonomous navigation and mission programming for mobile robotic systems.">
+          Drei abgeschlossene Schulungen zu Personensicherheit, autonomer Navigation und Missionsprogrammierung für mobile Robotersysteme.
+        </span>
+      </p>
+
+      <div class="cert-strip">
+
+        <div class="cert-card">
+          <strong>Personnel Safety</strong>
+          <span>
+            <span class="i18n"
+              data-de="Personensicherheit · Oktober 2026"
+              data-en="Personnel safety · October 2026">
+              Personensicherheit · Oktober 2026
+            </span>
+          </span>
+        </div>
+
+        <div class="cert-card">
+          <strong>Autonomous Navigation</strong>
+          <span>
+            <span class="i18n"
+              data-de="Autonome Navigation · Oktober 2026"
+              data-en="Autonomous navigation · October 2026">
+              Autonome Navigation · Oktober 2026
+            </span>
+          </span>
+        </div>
+
+        <div class="cert-card">
+          <strong>Mission Programming</strong>
+          <span>
+            <span class="i18n"
+              data-de="Missionsprogrammierung · Oktober 2026"
+              data-en="Mission programming · October 2026">
+              Missionsprogrammierung · Oktober 2026
+            </span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="cert-download-all" style="margin-top:18px;">
+        <a class="cert-link"
+          href="docs/UR_Certificates.pdf#page=6"
+          target="_blank"
+          rel="noopener noreferrer">
+          <span class="i18n"
+            data-de="MiR-Zertifikate ansehen"
+            data-en="View MiR certificates">
+            MiR-Zertifikate ansehen
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+3. Importante: ubicación del PDF
+Para que los botones funcionen, asegúrate de guardar UR_Certificates.pdf dentro de la carpeta docs de tu proyecto.
+
+La estructura quedaría así:
+
+Mi_Portafolio/
+│
+├── index.html
+│
+├── assets/
+│   ├── adrian-portrait.jpg
+│   └── ...
+│
+└── docs/
+    ├── SOLIDWORKS_Certificates.pdf
+    ├── UR_Certificates.pdf
+    └── Adrian_Agustin_Jaime_Luna_CV_DE.pdf
+Resultado: tendrás tres grupos de certificaciones con el mismo estilo visual, botones para abrir los documentos y compatibilidad con el selector DE/EN que ya tienes. No necesitas modificar el JavaScript existente.
+
+Por qué no mejor me das todo el código, como es tan largo y el control f no funciiona en github, es mejor reemplazarlo completo
+
+Procesó durante 3m 55s
+¡Sí, claro! 😄 Tienes razón, es mucho más fácil reemplazar todo el index.html que buscar partes del código en GitHub.
+
+Ya preparé el código completo en texto plano, con sus 1,621 líneas originales y las modificaciones integradas.
+
+Abrir el código HTML completo en texto
+
+Incluye todo el portafolio, no solamente la sección de certificados.
+
+El código conserva tus cinco proyectos, imágenes, videos, diseño y traducciones alemán/inglés. Además, incluye los 4 certificados de SOLIDWORKS, los 5 de Universal Robots y los 3 de MiR.
+
+Cómo reemplazarlo en GitHub
+Abre el archivo de texto que te compartí y copia todo su contenido (Ctrl + A y Ctrl + C).
+
+En GitHub, abre tu archivo index.html y selecciona el lápiz  para editarlo.
+
+Selecciona todo el código existente (Ctrl + A) y pega el nuevo (Ctrl + V).
+
+Presiona Commit changes para guardar.
+
+Importante: también debes subir UR_Certificates.pdf a la carpeta docs de tu repositorio. No elimines las carpetas existentes assets y docs.
+
+Así reemplazas el código de una sola vez, sin buscar ni modificar secciones manualmente.
+
+
+CODIGO_COMPLETO_index.html.txt
+Documento
 <!DOCTYPE html>
 
 <html lang="de">
@@ -874,6 +1235,22 @@
       }
     }
 
+    .cert-group + .cert-group{
+      margin-top:36px;
+      padding-top:30px;
+      border-top:1px solid var(--line);
+    }
+
+    .cert-group h3{
+      margin:0 0 10px;
+      font-size:clamp(1.2rem,2.4vw,1.55rem);
+      line-height:1.25;
+    }
+
+    .cert-group .section-lead{
+      margin-bottom:20px;
+    }
+
     .cert-link{
       display:inline-flex;
       align-items:center;
@@ -1409,7 +1786,11 @@
 <section id="zertifikate">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Zertifikate" data-en="Certifications">Zertifikate</span></div>
-<h2><span class="i18n" data-de="SOLIDWORKS Zertifizierungen" data-en="SOLIDWORKS Certifications">SOLIDWORKS Zertifizierungen</span></h2>
+<h2><span class="i18n" data-de="Technische Zertifizierungen" data-en="Technical Certifications">Technische Zertifizierungen</span></h2>
+<p class="section-lead"><span class="i18n" data-de="Meine Zertifikate ergänzen meine Projektarbeit in Konstruktion, Industrierobotik und autonomen mobilen Robotern." data-en="My certificates complement my project work in mechanical design, industrial robotics and autonomous mobile robots.">Meine Zertifikate ergänzen meine Projektarbeit in Konstruktion, Industrierobotik und autonomen mobilen Robotern.</span></p>
+
+<div class="cert-group">
+<h3><span class="i18n" data-de="SOLIDWORKS Zertifizierungen" data-en="SOLIDWORKS Certifications">SOLIDWORKS Zertifizierungen</span></h3>
 <p class="section-lead"><span class="i18n" data-de="Ergänzend zu meinen Projekten habe ich vier SOLIDWORKS Associate-Zertifizierungen, die meine Kenntnisse in Konstruktion, Simulation, additiver Fertigung und Nachhaltigkeit dokumentieren." data-en="In addition to my projects, I hold four SOLIDWORKS Associate certifications covering mechanical design, simulation, additive manufacturing and sustainability.">Ergänzend zu meinen Projekten habe ich vier SOLIDWORKS Associate-Zertifizierungen, die meine Kenntnisse in Konstruktion, Simulation, additiver Fertigung und Nachhaltigkeit dokumentieren.</span></p>
 <div class="cert-strip">
 <div class="cert-card">
@@ -1428,9 +1809,66 @@
 <strong><span class="i18n" data-de="Sustainability" data-en="Sustainability">Sustainability</span></strong>
 <span><span class="i18n" data-de="SOLIDWORKS Sustainability Associate" data-en="SOLIDWORKS Sustainability Associate">SOLIDWORKS Sustainability Associate</span></span>
 </div>
-</div><div class="cert-download-all" style="margin-top:18px;"><a class="cert-link" href="docs/SOLIDWORKS_Certificates.pdf" rel="noopener noreferrer" target="_blank"><span class="i18n" data-de="Alle Zertifikate ansehen" data-en="View all certificates">Alle Zertifikate ansehen</span></a></div>
 </div>
-</section><!-- Documents -->
+<div class="cert-download-all" style="margin-top:18px;">
+<a class="cert-link" href="docs/SOLIDWORKS_Certificates.pdf" rel="noopener noreferrer" target="_blank"><span class="i18n" data-de="Alle Zertifikate ansehen" data-en="View all certificates">Alle Zertifikate ansehen</span></a>
+</div>
+</div>
+
+<div class="cert-group">
+<h3>Universal Robots Academy</h3>
+<p class="section-lead"><span class="i18n" data-de="Fünf abgeschlossene Schulungen zu UR20/30, PolyScope X und den Core-, Pro- und Application-Lernpfaden der e-Series." data-en="Five completed training courses covering UR20/30, PolyScope X, and the e-Series Core, Pro and Application tracks.">Fünf abgeschlossene Schulungen zu UR20/30, PolyScope X und den Core-, Pro- und Application-Lernpfaden der e-Series.</span></p>
+<div class="cert-strip">
+<div class="cert-card">
+<strong><span class="i18n" data-de="UR20/30" data-en="UR20/30">UR20/30</span></strong>
+<span><span class="i18n" data-de="e-Learning · Dezember 2025" data-en="e-Learning · December 2025">e-Learning · Dezember 2025</span></span>
+</div>
+<div class="cert-card">
+<strong><span class="i18n" data-de="PolyScope X" data-en="PolyScope X">PolyScope X</span></strong>
+<span><span class="i18n" data-de="e-Learning · Dezember 2025" data-en="e-Learning · December 2025">e-Learning · Dezember 2025</span></span>
+</div>
+<div class="cert-card">
+<strong><span class="i18n" data-de="e-Series Core Track" data-en="e-Series Core Track">e-Series Core Track</span></strong>
+<span><span class="i18n" data-de="Lernpfad · Dezember 2025" data-en="Learning track · December 2025">Lernpfad · Dezember 2025</span></span>
+</div>
+<div class="cert-card">
+<strong><span class="i18n" data-de="e-Series Pro Track" data-en="e-Series Pro Track">e-Series Pro Track</span></strong>
+<span><span class="i18n" data-de="Lernpfad · Dezember 2025" data-en="Learning track · December 2025">Lernpfad · Dezember 2025</span></span>
+</div>
+<div class="cert-card">
+<strong><span class="i18n" data-de="e-Series Application Track" data-en="e-Series Application Track">e-Series Application Track</span></strong>
+<span><span class="i18n" data-de="Lernpfad · Dezember 2025" data-en="Learning track · December 2025">Lernpfad · Dezember 2025</span></span>
+</div>
+</div>
+<div class="cert-download-all" style="margin-top:18px;">
+<a class="cert-link" href="docs/UR_Certificates.pdf#page=1" rel="noopener noreferrer" target="_blank"><span class="i18n" data-de="Universal Robots Zertifikate ansehen" data-en="View Universal Robots certificates">Universal Robots Zertifikate ansehen</span></a>
+</div>
+</div>
+
+<div class="cert-group">
+<h3>Mobile Industrial Robots (MiR) Academy</h3>
+<p class="section-lead"><span class="i18n" data-de="Drei abgeschlossene Schulungen zu Personensicherheit, autonomer Navigation und Missionsprogrammierung für mobile Robotersysteme." data-en="Three completed training courses covering personnel safety, autonomous navigation and mission programming for mobile robotic systems.">Drei abgeschlossene Schulungen zu Personensicherheit, autonomer Navigation und Missionsprogrammierung für mobile Robotersysteme.</span></p>
+<div class="cert-strip">
+<div class="cert-card">
+<strong><span class="i18n" data-de="Personnel Safety" data-en="Personnel Safety">Personnel Safety</span></strong>
+<span><span class="i18n" data-de="Personensicherheit · Oktober 2026" data-en="Personnel safety · October 2026">Personensicherheit · Oktober 2026</span></span>
+</div>
+<div class="cert-card">
+<strong><span class="i18n" data-de="Autonomous Navigation" data-en="Autonomous Navigation">Autonomous Navigation</span></strong>
+<span><span class="i18n" data-de="Autonome Navigation · Oktober 2026" data-en="Autonomous navigation · October 2026">Autonome Navigation · Oktober 2026</span></span>
+</div>
+<div class="cert-card">
+<strong><span class="i18n" data-de="Mission Programming" data-en="Mission Programming">Mission Programming</span></strong>
+<span><span class="i18n" data-de="Missionsprogrammierung · Oktober 2026" data-en="Mission programming · October 2026">Missionsprogrammierung · Oktober 2026</span></span>
+</div>
+</div>
+<div class="cert-download-all" style="margin-top:18px;">
+<a class="cert-link" href="docs/UR_Certificates.pdf#page=6" rel="noopener noreferrer" target="_blank"><span class="i18n" data-de="MiR-Zertifikate ansehen" data-en="View MiR certificates">MiR-Zertifikate ansehen</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Documents -->
 <section id="dokumente">
 <div class="wrap">
 <div class="kicker"><span class="i18n" data-de="Unterlagen" data-en="Documents">Unterlagen</span></div>
